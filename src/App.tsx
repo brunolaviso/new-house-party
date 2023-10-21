@@ -51,16 +51,16 @@ export function App() {
             src="https://lh3.googleusercontent.com/p/AF1QipPSVp8IdxPKhiEmU77fPznHJWHGuO-P7AORntEZ=s680-w680-h510"
             alt=""
           />
+        </ImagePlaceWrapper>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14746.973005355649!2d-48.5649292!3d-22.4762806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c74f8f3d2eb7ed%3A0xdd5ced171ba944de!2zRWTDrWN1bGEgU29sw6FyaXM!5e0!3m2!1spt-BR!2sbr!4v1697859473827!5m2!1spt-BR!2sbr"
-            width="600"
+            width="100%"
             height="450"
             style={{ border: 0 }}
             allowFullScreen
-            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            loading="lazy"
           ></iframe>
-        </ImagePlaceWrapper>
       </Section>
     </>
   );
