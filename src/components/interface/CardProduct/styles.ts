@@ -13,11 +13,14 @@ export const CardProductWrapper = styled.div`
 
   div {
     height: 200px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     img {
-      width: 100%;
+      max-height: 100%;
       max-width: 300px;
-      height: 200px;
     }
   }
 
