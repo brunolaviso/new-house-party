@@ -46,7 +46,7 @@ export const CardProductWrapper = styled.div`
     transition: all 0.2s;
 
     &:hover {
-      background-color: #fbfbfb;
+      background-color: #397655;
     }
   }
 `

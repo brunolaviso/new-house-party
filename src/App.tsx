@@ -15,7 +15,9 @@ export function App() {
   const [products, setProducts] = useState<ProductRecord[]>([]);
 
   useEffect(() => {
-    api.get("products").then((response) => setProducts(response.data.records));
+    api.get("products").then((response) => {
+      setProducts(response.data.records.filter((product: ProductRecord) => !product.fields.guess))
+    });
   }, []);
 
   return (
