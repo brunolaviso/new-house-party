@@ -46,14 +46,24 @@ export const Content = styled(Dialog.Content)`
     &:focus {
       border-color: #888;
     }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: none;
+    }
   }
 `
 
 export const ButtonsWrapper = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export const CloseButton = styled(Dialog.Close)`
@@ -72,6 +82,10 @@ export const CloseButton = styled(Dialog.Close)`
     border-color: #397655;
     color: #397655;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 export const ConfirmButton = styled.button`
@@ -87,5 +101,9 @@ export const ConfirmButton = styled.button`
 
   &:hover {
     background-color: #397655;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%
   }
 `
