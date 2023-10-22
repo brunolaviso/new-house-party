@@ -4,6 +4,7 @@ import { Section } from "./components/interface/Section";
 import { GridCardProducts, ImagePlaceWrapper } from "./styles";
 import { api } from "./services/api";
 import { Product } from "./types/Product";
+import { Modal } from "./components/interface/Modal";
 
 interface ProductRecord {
   id: string;
@@ -13,12 +14,17 @@ interface ProductRecord {
 
 export function App() {
   const [products, setProducts] = useState<ProductRecord[]>([]);
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     api.get("products").then((response) => {
       setProducts(response.data.records.filter((product: ProductRecord) => !product.fields.guess))
     });
   }, []);
+
+  function handleOpenModal() {
+    setOpen(true)
+  }
 
   return (
     <>
@@ -42,7 +48,7 @@ export function App() {
       <Section title="Lista de presentes">
         <GridCardProducts>
           {products.map((product: ProductRecord) => (
-            <CardProduct key={product.id} product={product.fields} />
+            <CardProduct key={product.id} product={product.fields} handleOpenModal={handleOpenModal}/>
           ))}
         </GridCardProducts>
       </Section>
@@ -64,6 +70,7 @@ export function App() {
             loading="lazy"
           ></iframe>
       </Section>
+      <Modal open={open} setOpen={setOpen} />
     </>
   );
 }
