@@ -59,7 +59,7 @@ export function Modal({
         ) : (
           <ButtonsWrapper>
             <CloseButton>Cancelar</CloseButton>
-            <ConfirmButton onClick={confirmPresent}>Confirmar</ConfirmButton>
+            <ConfirmButton onClick={confirmPresent} disabled={!value}>Confirmar</ConfirmButton>
           </ButtonsWrapper>
         )}
       </Content>

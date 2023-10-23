@@ -92,7 +92,7 @@ export function App() {
           alguém chegou primeiro! Agora você pode escolher outra coisa que
           combine com você!
         </p>
-        <p>
+        <p className="italic">
           {`Para enviar o presente direto para o nosso novo Lar e não levar no dia
           do Chá de Casa Nova, nosso novo endereço é: ${import.meta.env.VITE_HOUSE_ADDRESS}`}
         </p>

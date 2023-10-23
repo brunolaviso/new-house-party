@@ -67,8 +67,9 @@ export const ButtonsWrapper = styled.div`
 `
 
 export const CloseButton = styled(Dialog.Close)`
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
+  height: 40px;
+  padding: 0 1rem;
+  border-radius: 2rem;
   border: none;
   background-color: #ffffff;
   border: 1px solid #529471;
@@ -89,8 +90,9 @@ export const CloseButton = styled(Dialog.Close)`
 `
 
 export const ConfirmButton = styled.button`
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
+  height: 40px;
+  padding: 0 1rem;
+  border-radius: 2rem;
   background-color: #529471;
   border: none;
   font-size: 1rem;
@@ -101,6 +103,11 @@ export const ConfirmButton = styled.button`
 
   &:hover {
     background-color: #397655;
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
   }
 
   @media (max-width: 768px) {

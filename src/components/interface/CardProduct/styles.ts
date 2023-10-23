@@ -41,8 +41,8 @@ export const CardProductWrapper = styled.div`
   }
 
   button {
-    padding: 1rem;
-    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
     background-color: #529471;
     border: none;
     font-size: 1.25rem;

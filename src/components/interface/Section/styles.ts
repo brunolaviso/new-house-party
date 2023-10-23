@@ -32,6 +32,10 @@ export const Content = styled.div`
 
   p {
     margin-bottom: 1.5rem;
-    line-height: 1%.5;
+    line-height: 1.75rem;
+
+    &.italic {
+      font-style: italic;
+    }
   }
 `
