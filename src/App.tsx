@@ -17,6 +17,7 @@ interface ProductRecord {
 export function App() {
   const [products, setProducts] = useState<ProductRecord[]>([]);
   const [open, setOpen] = useState(false);
+  const [currentProductId, setCurrentProducId] = useState('')
 
   useEffect(() => {
     api.get("products").then((response) => {
@@ -95,6 +96,8 @@ export function App() {
               key={product.id}
               product={product.fields}
               handleOpenModal={handleOpenModal}
+              productId={product.id}
+              setCurrentProducId={setCurrentProducId}
             />
           ))}
         </GridCardProducts>
@@ -117,7 +120,7 @@ export function App() {
           loading="lazy"
         ></iframe>
       </Section>
-      <Modal open={open} setOpen={setOpen} />
+      <Modal open={open} setOpen={setOpen} currentProductId={currentProductId} />
     </>
   );
 }
