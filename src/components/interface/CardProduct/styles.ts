@@ -11,22 +11,22 @@ export const CardProductWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  transition: all 0.5s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  div {
+  
+  a {
     height: 200px;
     
     display: flex;
     align-items: flex-end;
     justify-content: center;
-
+    
     img {
       max-height: 100%;
       max-width: 300px;
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 

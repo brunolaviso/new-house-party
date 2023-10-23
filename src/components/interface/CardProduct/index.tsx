@@ -12,25 +12,25 @@ export function CardProduct({
   product: { image, name, price, link, guess },
   productId,
   setCurrentProductId,
-  handleOpenModal
+  handleOpenModal,
 }: CardProductProps) {
   return (
-
-    <a href={link} target="_blank">
-      <CardProductWrapper>
-        <div>
-          <img src={image} alt={name} />
-        </div>
-        <span>{name}</span>
-        <strong>R$ {price}</strong>
-        <button onClick={(e) => {
-          e.preventDefault()
-          setCurrentProductId(productId)
-          handleOpenModal()
-        }} disabled={!!guess}>
-          {guess ? "Reservado" : "Presentear"}
-        </button>
-      </CardProductWrapper>
-    </a>
+    <CardProductWrapper>
+      <a href={link} target="_blank">
+        <img src={image} alt={name} />
+      </a>
+      <span>{name}</span>
+      <strong>R$ {price}</strong>
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          setCurrentProductId(productId);
+          handleOpenModal();
+        }}
+        disabled={!!guess}
+      >
+        {guess ? "Reservado" : "Presentear"}
+      </button>
+    </CardProductWrapper>
   );
 }
