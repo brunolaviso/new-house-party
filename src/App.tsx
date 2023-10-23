@@ -5,7 +5,8 @@ import { GridCardProducts, Hero, ImagePlaceWrapper } from "./styles";
 import { api } from "./services/api";
 import { Product } from "./types/Product";
 import { Modal } from "./components/interface/Modal";
-import { Header } from "./components/interface/Header";
+// import { Header } from "./components/interface/Header";
+import { Countdown } from "./components/interface/Countdown";
 
 interface ProductRecord {
   id: string;
@@ -29,12 +30,13 @@ export function App() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Hero>
         <h1>Yasmin e Bruno</h1>
         <p>16 de dezembro</p>
       </Hero>
-      <Section backgroundcolor="#e7fcf1">
+      <Countdown />
+      <Section>
         <p>
           Não poderíamos estar mais felizes em compartilhar este grande passo
           com familiares e amigos tão queridos e que tanto nos apoiam. Queremos
@@ -51,7 +53,7 @@ export function App() {
           combina com você e a nossa história juntos!
         </p>
       </Section>
-      <Section title="O casal">
+      <Section title="O casal" backgroundcolor="#e7fcf1">
         <p>
           De uma amizade de colegial nasceu um amor que já perdera há cinco
           anos. Entre muitas risadas, conquistas e aventuras, traçamos nossa
