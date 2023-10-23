@@ -17,12 +17,19 @@ interface ProductRecord {
 export function App() {
   const [products, setProducts] = useState<ProductRecord[]>([]);
   const [open, setOpen] = useState(false);
-  const [currentProductId, setCurrentProducId] = useState('')
+  const [currentProductId, setCurrentProductId] = useState('')
+
+  function fetchProducts() {
+    api
+      .get("products")
+      .then((response) => {
+        setProducts(response.data.records);
+      })
+      .catch((err) => console.log(err));
+  }
 
   useEffect(() => {
-    api.get("products").then((response) => {
-      setProducts(response.data.records);
-    });
+    fetchProducts()
   }, []);
 
   function handleOpenModal() {
@@ -97,7 +104,7 @@ export function App() {
               product={product.fields}
               handleOpenModal={handleOpenModal}
               productId={product.id}
-              setCurrentProducId={setCurrentProducId}
+              setCurrentProductId={setCurrentProductId}
             />
           ))}
         </GridCardProducts>
@@ -120,7 +127,7 @@ export function App() {
           loading="lazy"
         ></iframe>
       </Section>
-      <Modal open={open} setOpen={setOpen} currentProductId={currentProductId} />
+      <Modal open={open} setOpen={setOpen} currentProductId={currentProductId} fetchProducts={fetchProducts} />
     </>
   );
 }

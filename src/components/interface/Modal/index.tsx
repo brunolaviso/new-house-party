@@ -13,20 +13,32 @@ interface ModalProps {
   open: boolean;
   setOpen: (open: boolean) => void;
   currentProductId: string;
+  fetchProducts: () => void;
 }
 
-export function Modal({ open, setOpen, currentProductId }: ModalProps) {
+export function Modal({
+  open,
+  setOpen,
+  currentProductId,
+  fetchProducts,
+}: ModalProps) {
   const [value, setValue] = useState("");
+  const [loading, setLoading] = useState(false);
 
   function confirmPresent() {
-    api.patch(`products/${currentProductId}`, {
-      fields: {
-        guess: value,
-      },
-    }).then((response) => {
-      console.log(response);
-      setOpen(false);
-    });
+    setLoading(true);
+    api
+      .patch(`products/${currentProductId}`, {
+        fields: {
+          guess: value,
+        },
+      })
+      .then((response) => {
+        console.log(response);
+        fetchProducts();
+        setOpen(false);
+        setLoading(false);
+      });
   }
 
   return (
@@ -42,10 +54,14 @@ export function Modal({ open, setOpen, currentProductId }: ModalProps) {
           placeholder="Insira o nome aqui"
           onChange={(e) => setValue(e.target.value)}
         />
-        <ButtonsWrapper>
-          <CloseButton>Cancelar</CloseButton>
-          <ConfirmButton onClick={confirmPresent}>Confirmar</ConfirmButton>
-        </ButtonsWrapper>
+        {loading ? (
+          <span>Reservando...</span>
+        ) : (
+          <ButtonsWrapper>
+            <CloseButton>Cancelar</CloseButton>
+            <ConfirmButton onClick={confirmPresent}>Confirmar</ConfirmButton>
+          </ButtonsWrapper>
+        )}
       </Content>
     </Dialog.Root>
   );

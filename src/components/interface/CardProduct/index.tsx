@@ -5,13 +5,13 @@ interface CardProductProps {
   product: Product;
   productId: string;
   handleOpenModal: () => void;
-  setCurrentProducId: (id: string) => void;
+  setCurrentProductId: (id: string) => void;
 }
 
 export function CardProduct({
   product: { image, name, price, link, guess },
   productId,
-  setCurrentProducId,
+  setCurrentProductId,
   handleOpenModal
 }: CardProductProps) {
   return (
@@ -25,7 +25,7 @@ export function CardProduct({
         <strong>R$ {price}</strong>
         <button onClick={(e) => {
           e.preventDefault()
-          setCurrentProducId(productId)
+          setCurrentProductId(productId)
           handleOpenModal()
         }} disabled={!!guess}>
           {guess ? "Reservado" : "Presentear"}
