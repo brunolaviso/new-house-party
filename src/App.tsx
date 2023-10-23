@@ -63,7 +63,7 @@ export function App() {
       </Section>
       <Section title="O casal" backgroundcolor="#e7fcf1">
         <p>
-          De uma amizade de colegial nasceu um amor que já perdera há cinco
+          De uma amizade de colegial nasceu um amor que já perdura há cinco
           anos. Entre muitas risadas, conquistas e aventuras, traçamos nossa
           história, rodeados de pessoas que sempre nos apoiaram e participaram
           de cada boa memória que guardamos em nossos corações. Agora, chegou a
@@ -71,7 +71,7 @@ export function App() {
           formamos.
         </p>
         <p>
-          Nos unir em uma nova cidade pode parecer assuatdor, mas ao lado das
+          Nos unir em uma nova cidade pode parecer assustador, mas ao lado das
           pessoas certas sabemos que podemos enfrenta qualquer desafio. Por
           isso, pensamos em cada detalhe desse dia especial, para que possamos
           aproveitar todos juntos o início desse novo capítulo de nossa
