@@ -7,18 +7,22 @@ interface CardProductProps {
 }
 
 export function CardProduct({
-  product: { image, name, price, guess },
+  product: { image, name, price, link, guess },
   handleOpenModal
 }: CardProductProps) {
   return (
-    <a href="https://www.google.com" target="_blank">
+
+    <a href={link} target="_blank">
       <CardProductWrapper>
         <div>
           <img src={image} alt={name} />
         </div>
         <span>{name}</span>
         <strong>R$ {price}</strong>
-        <button onClick={handleOpenModal} disabled={!!guess}>
+        <button onClick={(e) => {
+          e.preventDefault()
+          handleOpenModal()
+        }} disabled={!!guess}>
           {guess ? "Reservado" : "Presentear"}
         </button>
       </CardProductWrapper>
