@@ -66,7 +66,7 @@ export const GridCardProducts = styled.div`
 `
 
 export const ImagePlaceWrapper = styled.div`
-  max-width: 800px;
+  width: 100%;
 
   img {
     width: 100%;
