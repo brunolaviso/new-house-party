@@ -21,7 +21,11 @@ export function App() {
 
   function fetchProducts() {
     api
-      .get("products")
+      .get("products", {
+        params: {
+          view: "Grid view",
+        },
+      })
       .then((response) => {
         setProducts(response.data.records);
       })
