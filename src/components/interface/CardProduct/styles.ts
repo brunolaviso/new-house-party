@@ -48,5 +48,10 @@ export const CardProductWrapper = styled.div`
     &:hover {
       background-color: #397655;
     }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
   }
 `

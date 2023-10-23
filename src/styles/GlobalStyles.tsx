@@ -16,4 +16,9 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Sofia', cursive;
     color: #529471;
   }
+
+  a {
+    text-decoration: none;
+    color: #404951;
+  }
 `;
