@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
   width: 100%;
-  height: 64px;
+  height: 4rem;
   background-color: #529471;
   color: #ffffff;
   display: flex;
@@ -13,7 +13,7 @@ export const HeaderWrapper = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 2rem;
 
     a {
       text-decoration: none;

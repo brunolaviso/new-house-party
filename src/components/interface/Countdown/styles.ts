@@ -3,17 +3,17 @@ import styled from "styled-components";
 export const CountdownWrapper = styled.div`
   width: 100%;
   background-color: #529471;
-  height: 300px;
+  height: 18.75rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 32px;
+  gap: 2rem;
 
   h2 {
     color: #ffffff;
-    font-size: 32px;
+    font-size: 2rem;
   }
 `
 
@@ -21,40 +21,40 @@ export const CardWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 1rem;
 `
 
 export const Card = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 6rem;
+  height: 6rem;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: #6eb38e;
-  border-radius: 16px;
+  border-radius: 1rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
-  @media (max-width: 768px) {
-    width: 70px;
-    height: 70px;
+  @media (max-width: 48rem) {
+    width: 4.5rem;
+    height: 4.5rem;
   }
 
   strong {
-    font-size: 32px;
+    font-size: 2rem;
 
-    @media (max-width: 768px) {
-      font-size: 24px;
+    @media (max-width: 48rem) {
+      font-size: 1.5rem;
     }
   }
 
   span {
-    font-size: 12px;
+    font-size: 0.75rem;
 
-    @media (max-width: 768px) {
-      font-size: 10px;
+    @media (max-width: 48rem) {
+      font-size: 0.625rem
     }
   }
 `

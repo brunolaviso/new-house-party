@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const ContainerWrapper = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 1rem;
 
   display: flex;
   flex-direction: column;

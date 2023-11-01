@@ -12,7 +12,7 @@ export const CardProductWrapper = styled.div`
   justify-content: center;
 
   a {
-    height: 200px;
+    height: 12.5rem;
     
     display: flex;
     align-items: flex-end;
@@ -20,7 +20,7 @@ export const CardProductWrapper = styled.div`
     
     img {
       max-height: 100%;
-      max-width: 300px;
+      max-width: 18.75rem;
       transition: all 0.5s;
 
       &:hover {

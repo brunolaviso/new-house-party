@@ -13,29 +13,29 @@ export const Overlay = styled(Dialog.Overlay)`
 
 export const Content = styled(Dialog.Content)`
   background-color: white;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90vw;
-  max-width: 450px;
+  max-width: 28.125rem;
   max-height: 85vh;
-  padding: 24px;
+  padding: 1.5rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 1rem;
 
   input {
     border: 1px solid #ccc;
-    border-radius: 16px;
+    border-radius: 1rem;
     width: 100%;
-    max-width: 300px;
-    padding: 8px 16px;
+    max-width: 18.75rem;
+    padding: 0.5rem 1rem;
     outline: transparent;
     font-size: 1rem;
 
@@ -47,7 +47,7 @@ export const Content = styled(Dialog.Content)`
       border-color: #888;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
       width: 100%;
       max-width: none;
     }
@@ -59,15 +59,15 @@ export const ButtonsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 1rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     flex-direction: column;
   }
 `
 
 export const CloseButton = styled(Dialog.Close)`
-  height: 40px;
+  height: 2.5rem;
   padding: 0 1rem;
   border-radius: 2rem;
   border: none;
@@ -84,13 +84,13 @@ export const CloseButton = styled(Dialog.Close)`
     color: #397655;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     width: 100%;
   }
 `
 
 export const ConfirmButton = styled.button`
-  height: 40px;
+  height: 2.5rem;
   padding: 0 1rem;
   border-radius: 2rem;
   background-color: #529471;
@@ -110,7 +110,7 @@ export const ConfirmButton = styled.button`
     cursor: not-allowed;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     width: 100%
   }
 `

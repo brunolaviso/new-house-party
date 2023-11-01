@@ -15,12 +15,12 @@ export const Hero = styled.div`
   flex-direction: column;
 
   h1 {
-    font-size: 64px;
+    font-size: 4rem;
     text-align: center;
   }
 
   p {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .scroll-down-arrow {
@@ -29,10 +29,10 @@ export const Hero = styled.div`
     background-repeat: no-repeat;
     position: absolute;
     z-index: 100;
-    height: 60px;
-    width: 80px;
+    height: 4rem;
+    width: 5rem;
     left: 50%;
-    margin-left: -40px;
+    margin-left: -2.5rem;
     bottom: 10%;
   
     -webkit-animation: fade_move_down 2s ease-in-out infinite;
@@ -61,8 +61,8 @@ export const Hero = styled.div`
 export const GridCardProducts = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  grid-gap: 2rem;
 `
 
 export const ImagePlaceWrapper = styled.div`
