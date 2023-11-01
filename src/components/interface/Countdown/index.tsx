@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Card, CardWrapper, CountdownWrapper } from "./styles";
 
 export function Countdown() {
-  const targetDate = new Date("2023-12-16T12:00:00");
+  const targetDate = new Date("2023-12-02T12:00:00");
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
