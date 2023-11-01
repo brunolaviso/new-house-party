@@ -45,7 +45,7 @@ export function App() {
       {/* <Header /> */}
       <Hero>
         <h1>Yasmin e Bruno</h1>
-        <p>16 de dezembro</p>
+        <p>02 de dezembro</p>
         <span className="scroll-down-arrow" />
       </Hero>
       <Countdown />
