@@ -16,9 +16,9 @@ interface ProductRecord {
 }
 
 export function App() {
-  const [products, setProducts] = useState<ProductRecord[]>([])
-  const [open, setOpen] = useState(false)
-  const [currentProductId, setCurrentProductId] = useState("")
+  const [products, setProducts] = useState<ProductRecord[]>([]);
+  const [open, setOpen] = useState(false);
+  const [currentProductId, setCurrentProductId] = useState("");
 
   function fetchProducts() {
     api
@@ -28,17 +28,17 @@ export function App() {
         },
       })
       .then((response) => {
-        setProducts(response.data.records)
+        setProducts(response.data.records);
       })
-      .catch((err) => console.log(err))
+      .catch((err) => console.log(err));
   }
 
   useEffect(() => {
-    fetchProducts()
-  }, [])
+    fetchProducts();
+  }, []);
 
   function handleOpenModal() {
-    setOpen(true)
+    setOpen(true);
   }
 
   return (
@@ -88,10 +88,11 @@ export function App() {
         <p>
           Para nos presentear, você poderá escolher qualquer item da Lista de
           Presentes, ou escolher algum presente de sua preferência e nos
-          surpreender! Todos as fotos e links são meramente ilustrativos, não
-          sendo necessário comprar de uma loja específica. Os itens de
-          decoração, quadros e porta-retratos não necessitam ser do tema da foto
-          ou da loja escolhida, deixamos isso livre para a sua imaginação.
+          surpreender! Todos as fotos e links (é só você clicar na imagem do
+          presente) são meramente ilustrativos, não sendo necessário comprar de
+          uma loja específica. Os itens de decoração, quadros e porta-retratos
+          não necessitam ser do tema da foto ou da loja escolhida, deixamos isso
+          livre para a sua imaginação.
         </p>
         <p>
           Caso no ícone do presente esteja escrito "reservado" significa quem
@@ -124,9 +125,9 @@ export function App() {
           por sua conta e risco.
         </p>
         <p>
-            R. Antônio Petri, 345 - Distrito Industrial, Barra Bonita - SP, 17340-000
-            <br />
-            A partir das 12h
+          R. Antônio Petri, 345 - Distrito Industrial, Barra Bonita - SP,
+          17340-000
+          <br />A partir das 12h
         </p>
         <p>
           Aguardamos vocês para comemorar conosco esse momento tão especial!
