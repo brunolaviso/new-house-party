@@ -15,9 +15,9 @@ interface ProductRecord {
 }
 
 export function App() {
-  const [products, setProducts] = useState<ProductRecord[]>([]);
-  const [open, setOpen] = useState(false);
-  const [currentProductId, setCurrentProductId] = useState('')
+  const [products, setProducts] = useState<ProductRecord[]>([])
+  const [open, setOpen] = useState(false)
+  const [currentProductId, setCurrentProductId] = useState("")
 
   function fetchProducts() {
     api
@@ -27,17 +27,17 @@ export function App() {
         },
       })
       .then((response) => {
-        setProducts(response.data.records);
+        setProducts(response.data.records)
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
   }
 
   useEffect(() => {
     fetchProducts()
-  }, []);
+  }, [])
 
   function handleOpenModal() {
-    setOpen(true);
+    setOpen(true)
   }
 
   return (
@@ -99,7 +99,9 @@ export function App() {
         </p>
         <p className="italic">
           {`Para enviar o presente direto para o nosso novo Lar e não levar no dia
-          do Chá de Casa Nova, nosso novo endereço é: ${import.meta.env.VITE_HOUSE_ADDRESS}`}
+          do Chá de Casa Nova, nosso novo endereço é: ${
+            import.meta.env.VITE_HOUSE_ADDRESS
+          }`}
         </p>
 
         <GridCardProducts>
@@ -114,8 +116,20 @@ export function App() {
           ))}
         </GridCardProducts>
       </Section>
-      <Section title="Edicula Pipipi Popopo" backgroundcolor="#e7fcf1">
-        <p>Aguardamos vocês às 12h! Vamos fazer um churrasco com cervejinha!</p>
+      <Section title="Local do evento" backgroundcolor="#e7fcf1">
+        <p>
+          Nossa comemoração será realizada na edicula solaris. Serviremos
+          churrasco e cervejinha. Caso queira trazer algo diferente para beber é
+          por sua conta e risco.
+        </p>
+        <p>
+            R. Antônio Petri, 345 - Distrito Industrial, Barra Bonita - SP, 17340-000
+            <br />
+            A partir das 12h
+        </p>
+        <p>
+          Aguardamos vocês para comemorar conosco esse momento tão especial!
+        </p>
         <ImagePlaceWrapper>
           <img
             src="https://lh3.googleusercontent.com/p/AF1QipPSVp8IdxPKhiEmU77fPznHJWHGuO-P7AORntEZ=s680-w680-h510"
@@ -132,7 +146,12 @@ export function App() {
           loading="lazy"
         ></iframe>
       </Section>
-      <Modal open={open} setOpen={setOpen} currentProductId={currentProductId} fetchProducts={fetchProducts} />
+      <Modal
+        open={open}
+        setOpen={setOpen}
+        currentProductId={currentProductId}
+        fetchProducts={fetchProducts}
+      />
     </>
   );
 }
