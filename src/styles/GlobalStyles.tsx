@@ -21,4 +21,8 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     color: #404951;
   }
+
+  strong {
+    font-weight: 700;
+  }
 `;

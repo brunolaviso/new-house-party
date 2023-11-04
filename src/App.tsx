@@ -7,6 +7,7 @@ import { Product } from "./types/Product";
 import { Modal } from "./components/interface/Modal";
 // import { Header } from "./components/interface/Header";
 import { Countdown } from "./components/interface/Countdown";
+import { Footer } from "./components/interface/Footer";
 
 interface ProductRecord {
   id: string;
@@ -146,6 +147,7 @@ export function App() {
           loading="lazy"
         ></iframe>
       </Section>
+      <Footer />
       <Modal
         open={open}
         setOpen={setOpen}
