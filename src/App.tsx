@@ -105,6 +105,11 @@ export function App() {
             import.meta.env.VITE_HOUSE_ADDRESS
           }`}
         </p>
+        <p className="italic">
+          Caso opte por essa opção, insira os dados da Yasmin como destinatário:
+          <br />
+          {import.meta.env.VITE_DESTINATARY_DATA}
+        </p>
 
         <GridCardProducts>
           {products.map((product: ProductRecord) => (
