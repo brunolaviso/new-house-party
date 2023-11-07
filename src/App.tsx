@@ -110,7 +110,6 @@ export function App() {
           <br />
           {import.meta.env.VITE_DESTINATARY_DATA}
         </p>
-
         <GridCardProducts>
           {products.map((product: ProductRecord) => (
             <CardProduct
